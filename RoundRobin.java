@@ -1,7 +1,8 @@
 import java.util.*;
 //import java.util.concurrent.CompletableFuture;
 public class RoundRobin {
-	public static void findWaitingTime(int process[],int wt_time[],int n ,int brusttime[],int quantum,int completion_time[],int arrival_time[]){
+	public static void findWaitingTime(int process[],int wt_time[],int n ,int brusttime[],int quantum,int completion_time[],
+					   int arrival_time[]){
 	     // copy the value of brusttime array into wt_time array.
 		int rem_time[] = new int[n];
 		
@@ -39,7 +40,8 @@ public class RoundRobin {
 				}
 		}	
 		}
-	public static void findTurnAroundTime(int process[] ,int wt_time[],int n,int brusttime[],int tat_time[],int completion_time[],int arrival_time[]){
+	public static void findTurnAroundTime(int process[] ,int wt_time[],int n,int brusttime[],int tat_time[],int completion_time[]
+					      ,int arrival_time[]){
 		for(int i=0;i<n;i++){
 			tat_time[i]= completion_time[i]-arrival_time[i];
 			wt_time[i] = tat_time[i]-brusttime[i];
